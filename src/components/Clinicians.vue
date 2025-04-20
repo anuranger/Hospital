@@ -140,6 +140,9 @@ findClinicians
 table {
   width: 100%;
   border-collapse: collapse;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  
 }
 
 th,
@@ -147,6 +150,7 @@ td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  font-weight:500;
 }
 
 button {
