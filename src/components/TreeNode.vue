@@ -8,6 +8,9 @@
       <span @click="toggle('top')" v-if="node.children.length" class="icon" >
         <i :class="isOpen ? 'fa fa-minus-square' : 'fas fa-plus-square'"></i>
       </span>
+      <i :style="{ textAlign: 'center', margin: '3px'}" v-if="node.index !== 0"
+      :class="node?.index?.toString().split('_').length === 2  ?  'fa-solid fa-hospital' : node.index !== 0 ? 'fa-solid fa-user' : '' "></i>
+
       <span v-if="node.name !== '' && !isEdit" @click="toggle" class="nodeName">{{ node.name }}</span>
       <input v-if="node.name == '' || isEdit" type="text" v-model="inputName" placeholder="Your Name">
         <button v-if="node.name == '' || isEdit" @click="updateNodeAction">Add</button>
@@ -143,7 +146,7 @@ span {
 
 .box {
   display: grid;
-  grid-template-columns: repeat(3, 25px fit-content(100%) 0.5fr);
+  grid-template-columns: repeat(4, 25px 25px fit-content(100%) 0.5fr);
   
   width: fit-content;
 }
